@@ -1,0 +1,28 @@
+.navbar {
+    background-color: pink;
+    height: 30px;
+}
+
+.navbar > li {
+    float: left;
+    list-style-type: none;
+    margin: 5px 15px 0 15px;
+    font-family: "Arial";
+    cursor: pointer;
+}
+
+.navbar > li:hover {
+    color: white;
+}
+
+}
+
+.options {
+	background-color: aqua;
+	float: left;
+}
+
+.display {
+	background-color: khaki;
+	float: right;
+}
