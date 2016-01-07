@@ -1,6 +1,13 @@
+body {
+    font-family: Arial;
+}
+
+
 .navbar {
     background-color: pink;
     height: 30px;
+    padding-bottom: 20px;
+    border: 3px solid black;
 }
 
 .navbar > li {
@@ -15,14 +22,41 @@
     color: white;
 }
 
-}
+
 
 .options {
 	background-color: aqua;
 	float: left;
+    width: 30%;
+    height: 400px;
+    border: 3px solid black;
+    display: inline-block;
+    padding: 0 10px;
+    box-sizing: border-box;
 }
+
+.first-half {
+    display: inline-block;
+    float: left;
+}
+
+.second-half {
+    display: inline-block;
+    float: right;
+}   
+
 
 .display {
 	background-color: khaki;
 	float: right;
+    width: 65%;
+    border: 3px solid black;
+    height: 400px;
+    box-sizing: border-box;
+    padding-left: 20px;
+}
+
+label {
+    display: block;
+    padding: 10px 0;
 }
