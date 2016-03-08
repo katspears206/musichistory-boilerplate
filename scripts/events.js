@@ -1,43 +1,47 @@
 "use strict";
 SongMaster = (function (oldSongMaster) {
 
-	let homeLink = document.getElementById("link-home");
-	let homeView = document.getElementById("home-view");
-
-	let listLink = document.getElementById("link-list");
-	let listView = document.getElementById("list-view");
-
-	let addLink = document.getElementById("link-add");
-	let addView = document.getElementById("add-view");
 
 	oldSongMaster.activateEvents = function () {
 
-		homeLink.addEventListener("click", function() {
-		  homeView.classList.add("hidden");
-		  addView.classList.add("hidden");
+		$("#link-home").click(function() {
+		  $("#list-view").addClass("hidden");
+		  $("#add-view").addClass("hidden");
 
-		  homeView.classList.add("visible");
-		  homeView.classList.remove("hidden");
+		  $("#home-view").addClass("visible");
+		  $("#home-view").removeClass("hidden");
 		});
 
-		listLink.addEventListener("click", function(event) {
+		$("#link-list").click(function(event) {
 		  event.preventDefault();
-		  homeView.classList.add("hidden");
-		  addView.classList.add("hidden");
+		  $("#home-view").addClass("hidden");
+		  $("#add-view").addClass("hidden");
 
-		  listView.classList.add("visible");
-		  listView.classList.remove("hidden");
+		  $("#list-view").addClass("visible");
+		  $("#list-view").removeClass("hidden");
 		});
 
-		addLink.addEventListener("click", function() {
-		  homeView.classList.add("hidden");
-		  listView.classList.add("hidden");
+		$("#link-add").click(function() {
+		  $("#home-view").addClass("hidden");
+		  $("#list-view").addClass("hidden");
 
-		  addView.classList.add("visible");
-		  addView.classList.remove("hidden");
+		  $("#add-view").addClass("visible");
+		  $("#add-view").removeClass("hidden");
 		});
 
-	}
+		$("#addMusicBtn").click(function() {
+			let addedMusic = {
+				"title" : $("#songInput").val(),
+				"artist" : $("#artistInput").val(),
+				"album" : $("#albumInput").val(),
+				"genre" : $("#genreInput").val()
+			};
+			console.log("addedMusic", addedMusic);
+
+			populateSongs(addedMusic);
+		});
+
+	};
 
 	return oldSongMaster;
 

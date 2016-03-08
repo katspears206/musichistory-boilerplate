@@ -5,12 +5,12 @@ var watch = require('gulp-watch');
 gulp.task('default', ['lint', 'watch']);
 
 gulp.task('watch', function() {
-  gulp.watch('./scripts/songs.js', ['lint']);
+  gulp.watch('./scripts/*.js', ['lint']);
 });
 
 
 gulp.task('lint', function() {
-  return gulp.src('./scripts/songs.js')
+  return gulp.src('./scripts/*.js')
     .pipe(jshint())
     .pipe(jshint.reporter('jshint-stylish'));
 });

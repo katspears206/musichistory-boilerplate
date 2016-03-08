@@ -12,7 +12,7 @@ function populateSongs (songs) {
 
 	}
 
-	document.getElementsByClassName("display")[0].innerHTML = writeToDom
+	document.getElementsByClassName("display")[0].innerHTML = writeToDom;
 
 	SongMaster.activateEvents();
 }

@@ -67,11 +67,12 @@
 
 	<section class="hidden" id="add-view">
 	  <div class="addMusic">
-	  	<input type="text" class="inputMusic">Song</input>
-	  	<input type="text" class="inputMusic">Artist</input>
-	  	<input type="text" class="inputMusic">Album</input>
+	  	<input type="text" id="songInput" class="inputMusic">Song</input>
+	  	<input type="text" id="artistInput" class="inputMusic">Artist</input>
+	  	<input type="text" id="albumInput" class="inputMusic">Album</input>
+	  	<input type="text" id="genreInput" class="inputMusic">Genre</input>
 
-	  	<button type="submit" class="addMusicButton">Add</button>
+	  	<button type="submit" id="addMusicBtn" class="addMusicButton">Add</button>
 	  </div>
 	</section>
 
@@ -79,7 +80,7 @@
 	  List
 	</section>
 
-
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="scripts/songs.js"></script>
 	<script src="scripts/home.js"></script>
 	<script src="scripts/events.js"></script>
