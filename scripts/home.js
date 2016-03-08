@@ -1,18 +1,14 @@
 "use strict";
 
-function populateSongs (songs) {
 
-	let writeToDom = "";
+function populateSongs (songs){
+	console.log("populateSongs is running");
+	for ( let prop in songs) {
+		let currentSong = songs[prop];
 
-	for (let i = 0; i < songs.length; i++) {
-		let currentSong = songs[i];
-
-		writeToDom += `<h2>${currentSong.title}</h2>` +
-		`<p>${currentSong.artist} | ${currentSong.album} | ${currentSong.genre}</p>`;
-
+		$(".display").append(`<h2>${currentSong.title}</h2><p>${currentSong.artist} | ${currentSong.album} | ${currentSong.genre}`);
 	}
 
-	document.getElementsByClassName("display")[0].innerHTML = writeToDom;
 
 	SongMaster.activateEvents();
 }

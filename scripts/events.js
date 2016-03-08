@@ -29,16 +29,25 @@ SongMaster = (function (oldSongMaster) {
 		  $("#add-view").removeClass("hidden");
 		});
 
-		$("#addMusicBtn").click(function() {
+		// $("#addMusicBtn").click(function() {
+		// 	let addedMusic = {
+		// 		"title" : $("#songInput").val(),
+		// 		"artist" : $("#artistInput").val(),
+		// 		"album" : $("#albumInput").val(),
+		// 		"genre" : $("#genreInput").val()
+		// 	};
+
+			$("#addMusicBtn").click(function() {
 			let addedMusic = {
-				"title" : $("#songInput").val(),
-				"artist" : $("#artistInput").val(),
-				"album" : $("#albumInput").val(),
-				"genre" : $("#genreInput").val()
+				title : $("#songInput").val(),
+				artist : $("#artistInput").val(),
+				album : $("#albumInput").val(),
+				genre : $("#genreInput").val()
 			};
 			console.log("addedMusic", addedMusic);
 
-			populateSongs(addedMusic);
+			$(".display").append(`<h2>${addedMusic.title}</h2><p>${addedMusic.artist} | ${addedMusic.album} | ${addedMusic.genre}`);
+
 		});
 
 	};
