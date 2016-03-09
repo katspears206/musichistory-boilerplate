@@ -13,7 +13,7 @@ let SongMaster = (function () {
 				let songList = data;
 				callback(songList);
 				console.log("dis data", data);
-			})
+			});
 		},
 		getSongs: function () {
 			return console.log(songs);
